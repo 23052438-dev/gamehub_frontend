@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers | Game Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+
+        <!-- LEFT SIDE (TIME) -->
+        <div class="left-section">
+            <span id="clock"></span>
+        </div>
+    
+        <!-- RIGHT SIDE -->
+        <div class="right-section">
+
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span class="toggle-circle"></span>
+            </button>
+        
+            <a href="profile.html" class="profile-icon">
+                <img src="images/profile.jpg" alt="Profile">
+            </a>
+        
+        </div>
+    </div>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">Game Hub</h2>
+        <a href="home.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="support.html">Support</a>
+        <a href="offers.html">Offers</a>
+        <a href="aboutus.html">About Us</a>
+    </aside>
+
+    <main class="content">
+        <h1 class="page-title">Special Offers 🔥</h1>
+
+        <div class="offer-card">
+            <img src="images/GTAV1.jpg" alt="GTA V">
+            <div class="offer-info">
+                <h3>GTA V</h3>
+                <p class="old-price">₹1,299</p>
+                <p class="new-price">₹999</p>
+                <a href="buy.html?game=GTA V&price=999" class="button">Buy Now</a>
+            </div>
+        </div>
+
+        <div class="offer-card">
+            <img src="images/WitcherIII1.jpg" alt="Witcher 3">
+            <div class="offer-info">
+                <h3>Witcher 3</h3>
+                <p class="old-price">₹1,499</p>
+                <p class="new-price">₹1,299</p>
+                <a href="buy.html?game=Witcher 3&price=1,299" class="button">Buy Now</a>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/script.js" defer></script>
+
+</body>
+</html>

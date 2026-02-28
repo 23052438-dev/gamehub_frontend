@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Game Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="top-bar">
+
+        <!-- LEFT SIDE (TIME) -->
+        <div class="left-section">
+            <span id="clock"></span>
+        </div>
+    
+        <!-- RIGHT SIDE -->
+        <div class="right-section">
+
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span class="toggle-circle"></span>
+            </button>
+        
+            <a href="profile.html" class="profile-icon">
+                <img src="images/profile.jpg" alt="Profile">
+            </a>
+        
+        </div>
+    </div>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">Game Hub</h2>
+        <a href="home.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="support.html" class="active">Support</a>
+        <a href="offers.html">Offers</a>
+        <a href="aboutus.html">About Us</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+        <h1 class="page-title">Support 📞</h1>
+        <p>If you need help, kindly contact our support team.</p>
+
+        <h2 style="margin-top:40px;">Contact Details</h2>
+        <p>Email: support@gamehub.com</p>
+        <p>Phone: +91 98765 43210</p>
+
+        <!-- FORM SECTION -->
+        <div id="formSection">
+            <h3 style="margin-top:30px;">Request a Game</h3>
+
+            <textarea id="issueBox" rows="4"
+                placeholder="Enter game name or issue..."></textarea>
+            <br><br>
+
+            <button id="submitBtn" onclick="submitRequest()" class="support-btn">
+                Submit Request
+            </button>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

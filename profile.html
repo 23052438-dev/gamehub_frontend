@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile | Game Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body" onload="loadProfile()">
+
+<div class="auth-card">
+
+    <h2>My Profile</h2>
+
+    <p><strong>Name:</strong> <span id="profileName"></span></p>
+    <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+    <p><strong>Phone:</strong> <span id="profilePhone"></span></p>
+
+    <button onclick="logoutUser()" class="auth-btn" style="margin-top:15px;">
+        Logout
+    </button>
+
+    <!-- Hidden Delete Button -->
+    <button id="deleteBtn" onclick="deleteAccount()" 
+            class="delete-btn">
+        Delete Account
+    </button>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

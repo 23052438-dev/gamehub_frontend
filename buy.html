@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Game Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+     
+</head>
+
+<body onload="loadGameDetails()">
+
+    <div class="top-bar">
+
+        <!-- LEFT SIDE (TIME) -->
+        <div class="left-section">
+            <span id="clock"></span>
+        </div>
+    
+        <!-- RIGHT SIDE -->
+        <div class="right-section">
+
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span class="toggle-circle"></span>
+            </button>
+        
+            <a href="profile.html" class="profile-icon">
+                <img src="images/profile.jpg" alt="Profile">
+            </a>
+        
+        </div>
+    </div>
+
+    <div id="header">
+        <h1>Game Hub Checkout</h1>
+    </div>
+
+<div class="container">
+
+    <div id="checkoutBox" class="checkout-card">
+
+        <h2>Payment Details</h2>
+
+        <div class="payment-section">
+
+            <label class="payment-option">
+                <input type="radio" name="payment" value="card">
+                Credit / Debit Card
+            </label>
+        
+            <label class="payment-option">
+                <input type="radio" name="payment" value="upi">
+                UPI
+            </label>
+        
+            <label class="payment-option">
+                <input type="radio" name="payment" value="netbanking">
+                Net Banking
+            </label>
+        
+        </div>        
+
+        <!-- ERROR BOX -->
+        <div id="errorBox" class="error-box" style="display: none;">
+            <strong>Error</strong><br>
+            Please select a payment method.
+        </div>
+
+        <div class="summary-section">
+            <h3>Order Summary</h3>
+            <p>Game: <span id="gameName">Game Name</span></p>
+            <p>Total Amount: <span id="gamePrice" class="price">₹0</span></p>
+        </div>
+
+        <button onclick="validatePayment()" class="button order-btn">
+            Place Order
+        </button>
+
+    </div>
+
+    <!-- SUCCESS BOX -->
+    <div id="successBox" style="display:none;">
+        <h1 style="text-align:center; margin-top:150px; font-size:45px; color: #008000;">
+            Payment Successful <br>
+            Thank you for your purchase.
+        </h1>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
