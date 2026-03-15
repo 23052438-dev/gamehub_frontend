@@ -22,9 +22,14 @@
             <button class="theme-toggle" onclick="toggleTheme()">
                 <span class="toggle-circle"></span>
             </button>
-        
+
+            <a href="cart.html" class="cart-btn">
+                🛒 My Cart
+                <span id="cartCount" class="cart-count">0</span> 
+            </a>
+            
             <a href="profile.html" class="profile-icon">
-                <img src="images/profile.png" alt="Profile">
+                <img src="images/profile.jpg" alt="Profile">
             </a>
         
         </div>
@@ -45,10 +50,7 @@
     <main class="content">
 
         <h1 class="page-title">Witcher III</h1>
-
-        <!-- MAIN IMAGE -->
-        <img src="images/WitcherIII1.jpg" class="game-main-img">
-
+        
         <p class="game-desc">
             The Witcher 3: Wild Hunt is an action role-playing game that follows the story of Geralt of Rivia, a monster slayer known as a Witcher. 
             The game is set in a dark-fantasy open world and features over 100 hours of content. Players can explore various regions, including Velen, Skellige, 
@@ -56,19 +58,15 @@
             on the decisions made throughout the game.
         </p>
 
-        <h3>Game Screenshots</h3>
-
-        <div class="game-gallery">
-            <img src="images/WitcherIII2.jpg">
-            <img src="images/WitcherIII3.jpg">
-            <img src="images/WitcherIII4.jpg">
-            <img src="images/WitcherIII5.jpg">
-        </div>
-
         <!-- BUY BUTTON -->
         <div class="price-section">
             <span class="price">₹1,499</span>
-            <a href="buy.html?game=Witcher%20III&price=1,499" class="button">Buy Now</a>
+            <button onclick="addToCart('Witcher III', 1,499)" class="game-btn">
+                Add to Cart
+            </button>
+            <a href="buy.html?price=1,499&title=Cyber%20Strike" class="game-btn">
+                Buy Now
+            </a>
         </div>
 
     </main>
