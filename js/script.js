@@ -260,10 +260,14 @@ function logoutUser() {
 
 
 // ================== ON LOAD ==================
-window.onload = function () {
+window.addEventListener("load", function () {
 
     if (typeof loadGameDetails === "function") {
         loadGameDetails();
+    }
+
+    if (typeof loadCheckout === "function") {
+        loadCheckout();
     }
 
     var savedTheme = localStorage.getItem("theme");
@@ -277,4 +281,25 @@ window.onload = function () {
     }
 
     updateClock();
-};
+});
+
+// ================== PASSWORD ICON ==================
+function togglePassword() {
+    const passwordInput = document.getElementById("loginPassword");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+    } else {
+        passwordInput.type = "password";
+    }
+}
+
+// ================== CHECKOUT ==================
+function loadCheckout() {
+    const params = new URLSearchParams(window.location.search);
+    const price = params.get("price");
+    const title = params.get("title");
+    if (price) {
+        document.getElementById("checkoutTotal").innerText = "₹" + price;
+    }
+}
