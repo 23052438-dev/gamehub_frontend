@@ -15,12 +15,23 @@
     <h2>Hello Gamer</h2>
 
     <input type="email" id="loginEmail" placeholder="Email ID">
-    <input type="password" id="loginPassword" placeholder="Password">
+    <div class="password-wrapper">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <span class="toggle-password" onclick="togglePassword()">
+            👁
+        </span>
+    </div>
 
-    <button id="loginBtn" onclick="loginUser()" class="auth-btn">
-        Login
-    </button>
-
+    <div class="button-group">
+        <button id="loginBtn" onclick="loginUser()" class="auth-btn">
+            Login
+        </button>
+    
+        <a href="register.html" class="auth-btn register-btn">
+            Register
+        </a>
+    </div>
+    
     <p id="loginMessage" class="auth-message"></p>
 
 </div>
