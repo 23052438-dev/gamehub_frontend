@@ -22,11 +22,15 @@
             <button class="theme-toggle" onclick="toggleTheme()">
                 <span class="toggle-circle"></span>
             </button>
-        
+
+            <a href="cart.html" class="cart-btn">
+                🛒 My Cart
+                <span id="cartCount" class="cart-count">0</span> 
+            </a>
+            
             <a href="profile.html" class="profile-icon">
                 <img src="images/profile.png" alt="Profile">
             </a>
-        
         </div>
     </div>
 
@@ -55,24 +59,18 @@
             the game follows three protagonists: Michael De Santa, a retired bank robber; Franklin Clinton, a street gangster; and Trevor Philips, a drug dealer. 
             Players can switch between these characters to complete missions and explore the open world, which includes a variety of activities and side missions. 
         </p>
-
-        <h3>Game Screenshots</h3>
-
-        <div class="game-gallery">
-            <img src="images/GTAV2.jpg">
-            <img src="images/GTAV3.jpg">
-            <img src="images/GTAV4.jpg">
-            <img src="images/GTAV5.jpg">
-        </div>
         
         <!-- BUY BUTTON -->
         <div class="price-section">
             <span class="price">₹1,299</span>
-            <a href="buy.html?game=GTA%20V&price=1,299" class="button">Buy Now</a>
+            <button onclick="addToCart('GTA V', 1,299)" class="game-btn">
+                Add to Cart
+            </button>
+            <a href="buy.html?price=1,299&title=Cyber%20Strike" class="game-btn">
+                Buy Now
+            </a>
         </div>
-        
     </main>
-
 </div>
 
 <script src="js/script.js" defer></script>
