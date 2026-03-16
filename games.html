@@ -45,7 +45,18 @@
     <!-- MAIN CONTENT -->
     <main class="content">
         <h1 class="page-title">Discover Games 🎮</h1>
-
+        <!-- AI RECOMMENDATION BOX -->
+        <div class="ai-recommendation">
+            <h2>AI Game Recommender</h2>
+            <input 
+                type="text" 
+                id="recommendInput"
+                placeholder="Describe the type of game you like (e.g. open world RPG)"
+    >
+            <button onclick="getRecommendation()">Recommend</button>
+            <p id="recommendResult"></p>
+        </div>
+        
         <div class="game-list">
 
             <!-- GAME 1 -->
