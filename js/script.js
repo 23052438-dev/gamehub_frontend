@@ -86,7 +86,7 @@ async function getRecommendation() {
 
     if (!input) return;
 
-    output.innerHTML = "Thinking...";
+    output.innerHTML = "🤖 AI is analyzing your preference...";
 
     try {
         const response = await fetch(BASE_URL + "/api/recommend", {
