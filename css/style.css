@@ -591,3 +591,55 @@ body:not(.dark-mode) select {
     background-color: white;
     color: black;
 }
+
+/* ================= AI RECOMMENDATION ================= */
+
+.ai-recommendation{
+    margin: 25px 0;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+}
+
+.ai-recommendation h2{
+    margin-bottom: 15px;
+}
+
+.ai-recommendation input{
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 10px;
+    outline: none;
+}
+
+.ai-recommendation button{
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(120deg,#ff4b2b,#ff416c);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.ai-recommendation button:hover{
+    transform: scale(1.05);
+}
+
+#recommendResult{
+    margin-top: 15px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+body.dark-mode .ai-recommendation{
+    background: rgba(0,0,0,0.4);
+}
+
+body.dark-mode .ai-recommendation input{
+    background:#1f2937;
+    color:white;
+}
