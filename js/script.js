@@ -20,22 +20,13 @@ function loadGameDetails() {
 
 // ================== PAYMENT VALIDATION ==================
 function validatePayment() {
+    var selected = document.getElementById("paymentMethod").value;
 
-    var options = document.getElementsByName("payment");
-    var paymentSelected = false;
-
-    for (var i = 0; i < options.length; i++) {
-        if (options[i].checked) {
-            paymentSelected = true;
-            break;
-        }
-    }
-
-    if (!paymentSelected) {
-        document.getElementById("errorBox").style.display = "block";
+    if (!selected) {
+        alert("Please select a payment method.");
     } else {
-        document.getElementById("checkoutBox").style.display = "none";
-        document.getElementById("successBox").style.display = "block";
+        alert("Payment successful! Thank you for your purchase.");
+        window.location.href = "index.html";
     }
 }
 
