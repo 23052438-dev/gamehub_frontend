@@ -2,37 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games | Game Hub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-    <div class="top-bar">
-
-        <!-- LEFT SIDE (TIME) -->
-        <div class="left-section">
-            <span id="clock"></span>
-        </div>
-    
-        <!-- RIGHT SIDE -->
-        <div class="right-section">
-
-            <button class="theme-toggle" onclick="toggleTheme()">
-                <span class="toggle-circle"></span>
-            </button>
-        
-            <a href="profile.html" class="profile-icon">
-                <img src="images/profile.jpg" alt="Profile">
-            </a>
-        
-        </div>
-    </div>
 
 <div class="layout">
 
-    <!-- LEFT SIDEBAR -->
+    <!-- SIDEBAR -->
     <aside class="sidebar">
         <h2 class="logo">Game Hub</h2>
         <a href="index.html">Home</a>
@@ -44,57 +22,56 @@
 
     <!-- MAIN CONTENT -->
     <main class="content">
-        <h1 class="page-title">Discover Games 🎮</h1>
-        <!-- AI RECOMMENDATION BOX -->
-        <div class="ai-recommendation">
-            <h2>AI Game Recommender</h2>
-           <input
-               type="text" 
-               id="aiInput"
-               placeholder="Describe the type of game you like (e.g. open world RPG)"
-               >
-            <button onclick="getRecommendation()">Recommend</button>
-            <p id="aiOutput"></p>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+
+            <h1 class="page-title">Discover Games 🎮</h1>
+        
+            <!-- SEARCH BAR -->
+            <input 
+                type="text" 
+                id="searchInput"
+                placeholder="Search games..."
+                onkeyup="searchGames()"
+                style="padding:8px 12px; border-radius:8px; border:none; width:220px;"
+            >
+        
         </div>
         
-        <div class="game-grid">
+        <h1 class="page-title">Discover Games 🎮</h1>
 
-            <!-- GAME 1 -->
-            <div class="game-card">
-                <img src="images/GTAV1.jpg" alt="GTA V">
-                <div class="game-info">
-                    <h3>GTA V</h3>
-                    <p>Open-world action adventure.</p>
-                    <a href="./gtav.html" class="game-btn">View Game</a>
-                </div>
-            </div>
+        <!-- THIS IS THE IMPORTANT PART -->
+        <div class="game-grid" id="gameGrid"></div>
 
-            <!-- GAME 2 -->
-            <div class="game-card">
-                <img src="images/WitcherIII1.jpg" alt="Witcher 3">
-                <div class="game-info">
-                    <h3>The Witcher III - Wild Hunt</h3>
-                    <p>Story-driven RPG adventure.</p>
-                    <a href="./witcher3.html" class="game-btn">View Game</a>
-                </div>
-            </div>
-
-            <!-- GAME 3 -->
-            <div class="game-card">
-                <img src="images/Minecraft1.jpg" alt="Minecraft">
-                <div class="game-info">
-                    <h3>Minecraft</h3>
-                    <p>Creative sandbox game.</p>
-                    <a href="./minecraft.html" class="game-btn">View Game</a>
-                </div>
-            </div>
-
-        </div>
     </main>
 
 </div>
 
-<script src="js/script.js" defer></script>
+<script src="js/script.js"></script>
+
+<!-- ================== CHATBOT ================== -->
+
+<!-- Floating Icon -->
+<div id="chatIcon" onclick="toggleChatbot()">
+    💬
+</div>
+
+<!-- Chatbox -->
+<div id="chatBox">
+
+    <div id="chatHeader">
+        🤖 GameBot
+        <span onclick="toggleChatbot()">✖</span>
+    </div>
+
+    <div id="chatMessages"></div>
+
+    <div id="chatInputArea">
+        <input type="text" id="chatInput" placeholder="Ask for games...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
 
 </body>
 </html>
