@@ -294,3 +294,45 @@ function loadCheckout() {
         document.getElementById("checkoutTotal").innerText = "₹" + price;
     }
 }
+
+// ================== CART ==================
+function addToCart(name, price) {
+    var cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    cart.push({ name: name, price: price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(name + " added to cart!");
+}
+
+function loadCart() {
+    var cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    var cartItems = document.getElementById("cartItems");
+    var totalPrice = document.getElementById("totalPrice");
+    var cartCount = document.getElementById("cartCount");
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = "<p style='color:gray;'>Your cart is empty.</p>";
+        cartCount.innerHTML = "0 Items";
+        totalPrice.innerHTML = "Total: ₹0";
+        return;
+    }
+
+    var total = 0;
+    var html = "";
+
+    for (var i = 0; i < cart.length; i++) {
+        html += "<div class='cart-item'>" +
+                    "<span>" + cart[i].name + "</span>" +
+                    "<span>₹" + cart[i].price + "</span>" +
+                "</div>";
+        total += cart[i].price;
+    }
+
+    cartItems.innerHTML = html;
+    cartCount.innerHTML = cart.length + " Item(s)";
+    totalPrice.innerHTML = "Total: ₹" + total;
+}
+
+function clearCart() {
+    localStorage.removeItem("cart");
+    loadCart();
+}
